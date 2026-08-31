@@ -1,1 +1,16 @@
-/penjual
+# Jangan deploy folder yang tidak dibutuhkan
+node_modules
+.git
+.github
+.gitignore
+storage
+tests
+docker
+ansible
+sample_csvs
+.vscode
+.env
+.env.*
+
+# Biarkan vendor tetap aman karena Composer akan dipasang di build Vercel
+# Jangan menambahkan folder app, config, routes, public, bootstrap, database, resources, artisan, atau composer.json ke daftar ignore
