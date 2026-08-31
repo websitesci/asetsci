@@ -1,20 +1,13 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/index.php",
-      "use": "@vercel/php"
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.7.1"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/(.*)",
       "dest": "/api/index.php"
     }
-  ],
-  "installCommand": "composer install --no-interaction --prefer-dist --no-progress",
-  "env": {
-    "APP_ENV": "production",
-    "APP_DEBUG": "false"
-  }
+  ]
 }
