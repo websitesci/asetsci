@@ -1,16 +1,15 @@
-# Jangan deploy folder yang tidak dibutuhkan
+# Files and folders that should not be shipped to Vercel
 node_modules
 .git
 .github
 .gitignore
-storage
+.vscode
 tests
 docker
 ansible
 sample_csvs
-.vscode
 .env
 .env.*
 
-# Biarkan vendor tetap aman karena Composer akan dipasang di build Vercel
-# Jangan menambahkan folder app, config, routes, public, bootstrap, database, resources, artisan, atau composer.json ke daftar ignore
+# Keep Laravel runtime folders available for the app to boot correctly
+# Do not ignore app/, bootstrap/, config/, public/, routes/, resources/, database/, artisan, composer.json, or vendor/
